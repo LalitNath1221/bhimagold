@@ -1,0 +1,177 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);	
+.category_btn{
+    border-bottom: 4px solid white;
+    cursor: pointer;
+    margin: 0 1rem;
+    padding: 3px 5px;
+    transition: .3s ease-in-out;
+}
+.category_btn:hover{
+    border-bottom: 4px solid rgb(241, 115, 115);
+}
+
+.slideshow {
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 100%;
+    padding-block: 2rem;
+    position: relative;
+  }
+  
+  .slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+  }
+  
+  .slide {
+    display: inline-block;
+  
+    height: 400px;
+    width: 100%;
+    border-radius: 40px;
+  }
+  
+  /* Buttons */
+  
+  .slideshowDots {
+    text-align: center;
+    position: absolute;
+    transform-origin: center;
+    left: 50%;
+    bottom: 2rem;
+  }
+  
+  .slideshowDot {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+  
+    cursor: pointer;
+    margin: 15px 7px 0px;
+  
+    background-color: #c4c4c4;
+  }
+  
+  .slideshowDot.active {
+    background-color: #6a0dad;
+  }
+
+
+  
+  .text_part{
+    width: 40%;
+  }
+  .gallry_part{
+    width: 60%;
+  }
+  .gallry1{
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .gallry1 li{
+    transform-origin: center;
+  }
+  .gallry1 .img1{
+    position: relative;
+    width: 20rem;
+    left: 40%;
+  }
+  .gallry1 .img3{
+    position: absolute;
+    left: 20%;
+    bottom: -2rem;
+    width: 20rem;
+  }
+  .gallry1 .img2{
+    position: absolute;
+    width: 15rem ;
+    left: 15%;
+    top: 0;
+    z-index: -1;
+  }
+
+
+  .category_card{
+    -webkit-box-shadow: 5px 1px 31px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 1px 31px -6px rgba(0,0,0,0.75);
+    box-shadow: 5px 1px 31px -6px rgba(0,0,0,0.75);
+    transition: .3s ease-in-out;
+    margin: .5rem;
+  }
+  .category_card:hover{
+    transform: scale(1.05);
+  }
+
+  .collection_card{
+    width: 25rem;
+    position: relative;
+    aspect-ratio: 1/.6;
+    margin: .5rem;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+  }
+  .collection_card:hover{
+    -webkit-box-shadow: 5px 1px 31px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 1px 31px -6px rgba(0,0,0,0.75);
+    box-shadow: 5px 1px 31px -6px rgba(0,0,0,0.75);
+  }
+  .collection_card .image{
+    width: 100%;
+    height: 100%;
+  }
+  .collection_card .image img{
+    width: 100%;
+    height: 100%;
+  }
+  .collection_card .text{
+    position: absolute;
+    width: 100%;
+    bottom: 0%;
+    background-color: rgb(0 0 0 / 40%);
+  }
+  .collection_card .text p{
+    font-size: 18px;
+  }
+  .trust_card{
+    width: 18rem;
+  }
+  @media (min-width: 640px) { 
+    .trust_card{
+        width: 20rem;
+      }
+   }
+
+  @media (min-width: 768px) {
+    .trust_card{
+        width: 22rem;
+      }
+  }
+  @media (max-width: 768px) { 
+    .container1{
+        height: 100%;
+      }
+    
+    .text_part{
+    width: 100%;
+  }
+  .gallry_part{
+    width: 100%;
+    padding-top: 3rem;
+  }
+  .gallry1 .img1{
+    width: 15rem;
+    left: 40%;
+  }
+  .gallry1 .img3{
+    left: 20%;
+    bottom: -2rem;
+    width: 15rem;
+  }
+  .gallry1 .img2{
+    width: 10rem ;
+    left: 15%;
+    top: 0;
+  }
+}
