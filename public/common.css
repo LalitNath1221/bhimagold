@@ -137,6 +137,19 @@
   .trust_card{
     width: 18rem;
   }
+  .container_review_card{
+  }
+  .main_footer ul{
+    padding-top: 2rem;
+  }
+  .footer_left ul li{
+    font-size: 16px;
+    margin-block: 1rem;
+  }
+  .right_footer li{
+    margin-block: 1rem;
+  }
+
   @media (min-width: 640px) { 
     .trust_card{
         width: 20rem;

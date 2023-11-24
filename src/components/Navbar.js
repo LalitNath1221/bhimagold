@@ -41,7 +41,7 @@ export default class Navbar extends Component {
                 <img className="w-40" src={logo} alt="" />
               </li>
               <li className="mx-2">
-                <div className="flex flex-row border-2 border-black rounded-lg px-2 justify-center items-center">
+                <div className="flex flex-row border-[1px] border-red-500 px-2 justify-center items-center">
                   <div className="">
                     <span className="material-symbols-outlined">search</span>
                   </div>
@@ -56,10 +56,10 @@ export default class Navbar extends Component {
                 </div>
               </li>
               <li className="mx-2 hidden lg:block">
-                <a className="px-3 py-2 bg-blue-500 mx-2 rounded-lg" href="#">
+                <a className="px-3 py-3 bg-gradient-to-r from-red-500 to-pink-400 transition ease-in-out hover:drop-shadow-xl text-black mx-2" href="#">
                   Gift Card
                 </a>
-                <a className="px-3 py-2 bg-blue-500 mx-2 rounded-lg" href="#">
+                <a className="px-3 py-3 bg-gradient-to-r from-red-500 to-pink-400 transition ease-in-out hover:drop-shadow-xl text-black mx-2" href="#">
                   Bhima my choice
                 </a>
               </li>
