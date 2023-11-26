@@ -25,7 +25,6 @@
   
   .slide {
     display: inline-block;
-  
     height: 400px;
     width: 100%;
     border-radius: 40px;
@@ -149,6 +148,29 @@
   .right_footer li{
     margin-block: 1rem;
   }
+
+  .container_slider{
+
+  }
+  .container_slider .slider{
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: auto;
+    gap: 1.2rem;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .container_slider .slider::-webkit-scrollbar{
+    display: none;
+  }
+  .container_slider .slider .slider_card_container{
+    scroll-snap-align: start;
+    padding: 0%;
+    margin: 0%;
+  }
+
 
   @media (min-width: 640px) { 
     .trust_card{

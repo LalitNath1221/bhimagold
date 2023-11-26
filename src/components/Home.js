@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Helmet} from "react-helmet";
 import Carousal2 from "./Carousal2";
 import image4 from "../assets/media/image4.png";
 import image5 from "../assets/media/image5.png";
@@ -8,6 +9,23 @@ import collage1 from "../assets/media/collage1.png";
 import decor from "../assets/media/decor.png";
 
 export default class Home extends Component {
+
+  prevSlide = () => {
+    const track = document.getElementById("review_slider");
+    track.scrollTo({
+      left: track.scrollLeft - track.firstElementChild.offsetWidth,
+      behavior: "smooth"
+    });
+  }
+
+  nextSlide = () => {
+    const track = document.getElementById("review_slider");
+    track.scrollTo({
+      left: track.scrollLeft + track.firstElementChild.offsetWidth,
+      behavior: "smooth"
+    });
+  }
+
   render() {
     return (
       <>
@@ -399,27 +417,31 @@ export default class Home extends Component {
               <div className="trust_card flex flex-col justify-center items-center m-1">
                 <div className="w-20">
                   <img
-                    src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fbc006d50-203a-11ed-bf3f-cb401eafe67a.png&w=128&q=75" alt=""
+                    src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fbc006d50-203a-11ed-bf3f-cb401eafe67a.png&w=128&q=75"
+                    alt=""
                   />
                 </div>
                 <p className="text-xl font-semibold text-center mx-3 py-2">
-                Certified Diamonds
+                  Certified Diamonds
                 </p>
                 <p className="text-lg   text-center mx-3 py-2">
-                Every diamond passes through internal quality tests with IGI- GIA certification
+                  Every diamond passes through internal quality tests with IGI-
+                  GIA certification
                 </p>
               </div>
               <div className="trust_card flex flex-col justify-center items-center m-1">
                 <div className="w-20">
                   <img
-                    src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fce9840f0-203a-11ed-bf3f-cb401eafe67a.png&w=128&q=75" alt=""
+                    src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fce9840f0-203a-11ed-bf3f-cb401eafe67a.png&w=128&q=75"
+                    alt=""
                   />
                 </div>
                 <p className="text-xl font-semibold text-center mx-3 py-2">
-                Transparent Billing
+                  Transparent Billing
                 </p>
                 <p className="text-lg   text-center mx-3 py-2">
-                Every piece of jewellery has accurate and detailed breakup to assure complete transparency
+                  Every piece of jewellery has accurate and detailed breakup to
+                  assure complete transparency
                 </p>
               </div>
             </div>
@@ -449,99 +471,175 @@ export default class Home extends Component {
                   </div>
                 </div>
                 <div className="relative flex flex-col w-full sm:w-3/4 md:w-1/2 items-center">
-                  <img src={collage2} alt=""/>
+                  <img src={collage2} alt="" />
                 </div>
               </div>
             </div>
           </div>
-          <div className="container_customer hidden py-10">
+          <div className="container_customer py-10">
             <div>
               <p className="heading1 font-medium text-center text-5xl px-3">
                 What Our Customers Say
               </p>
             </div>
             <div className="container_review_card py-10">
-              <div className="review_card w-full sm:w-full md:w-[30rem] lg:w-[50rem]">
-                <div className="relative flex flex-row p-2 md:p-5 md:pl-[50px] justify-center md:justify-end">
-                  <div className="absolute w-[110px] -top-5 md:left-[20px] md:top-2">
-                    <img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F149ae760-e4d0-11ed-8f73-7bdf9ddb359c.png&w=256&q=75" alt="" />
-                  </div>
-                  <div className="w-full p-2 sm:w-[18rem] md:w-full mx-auto md:p-5 pt-24 md:pl-20 bg-gray-200">
-                    <div className="">
-                      <p>
-                        <span className="text-2xl text-red-600 px-3 font-semibold border-r-[1px] border-r-gray-800">
-                          Jyoti
-                        </span>
-                        <span className="text-xl px-2">Rings & Bracelets</span>
-                      </p>
-                      <p className="text-lg px-4 pt-5">
-                      Hello everyone, This is jyoti from Punjab. Last year I got to know about Bhima jewellers on Facebook .then I ordered 2 rings and one bracelet .That's around 95 k after discount as well as we got 2gold coins .Moreover If talk about its purity its all 22karat.I am satisfied and happy to buy all amazing designs from Bhima jewellers.
-                      </p>
+              <div className="container_slider" data-slider>
+                <div id="review_slider" className="slider" data-slider-track>
+                  <div className="slider_card_container">
+                    <div className="review_card w-full sm:w-full md:w-[30rem] lg:w-[50rem]">
+                      <div className="relative flex flex-row p-2 md:p-5 md:pl-[50px] justify-center md:justify-end">
+                        <div className="absolute w-[110px] -top-5 md:left-[20px] md:top-2">
+                          <img
+                            src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F149ae760-e4d0-11ed-8f73-7bdf9ddb359c.png&w=256&q=75"
+                            alt=""
+                          />
+                        </div>
+                        <div className="w-full p-2 sm:w-[18rem] md:w-full mx-auto md:p-5 pt-24 md:pl-20 bg-gray-200">
+                          <div className="">
+                            <p>
+                              <span className="text-2xl text-red-600 px-3 font-semibold border-r-[1px] border-r-gray-800">
+                                Jyoti
+                              </span>
+                              <span className="text-xl px-2">
+                                Rings & Bracelets
+                              </span>
+                            </p>
+                            <p className="text-lg px-4 pt-5">
+                              Hello everyone, This is jyoti from Punjab. Last
+                              year I got to know about Bhima jewellers on
+                              Facebook .then I ordered 2 rings and one bracelet
+                              .That's around 95 k after discount as well as we
+                              got 2gold coins .Moreover If talk about its purity
+                              its all 22karat.I am satisfied and happy to buy
+                              all amazing designs from Bhima jewellers.
+                            </p>
+                          </div>
+                          <div className=""></div>
+                        </div>
+                      </div>
                     </div>
-                    <div className=""></div>
+                  </div>
+                  <div className="slider_card_container">
+                    <div className="review_card w-full sm:w-full md:w-[30rem] lg:w-[50rem]">
+                      <div className="relative flex flex-row p-2 md:p-5 md:pl-[50px] justify-center md:justify-end">
+                        <div className="absolute w-[110px] -top-5 md:left-[20px] md:top-2">
+                          <img
+                            src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F149ae760-e4d0-11ed-8f73-7bdf9ddb359c.png&w=256&q=75"
+                            alt=""
+                          />
+                        </div>
+                        <div className="w-full p-2 sm:w-[18rem] md:w-full mx-auto md:p-5 pt-24 md:pl-20 bg-gray-200">
+                          <div className="">
+                            <p>
+                              <span className="text-2xl text-red-600 px-3 font-semibold border-r-[1px] border-r-gray-800">
+                                Jyoti
+                              </span>
+                              <span className="text-xl px-2">
+                                Rings & Bracelets
+                              </span>
+                            </p>
+                            <p className="text-lg px-4 pt-5">
+                              Hello everyone, This is jyoti from Punjab. Last
+                              year I got to know about Bhima jewellers on
+                              Facebook .then I ordered 2 rings and one bracelet
+                              .That's around 95 k after discount as well as we
+                              got 2gold coins .Moreover If talk about its purity
+                              its all 22karat.I am satisfied and happy to buy
+                              all amazing designs from Bhima jewellers.
+                            </p>
+                          </div>
+                          <div className=""></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="slider_card_container">
+                    <div className="review_card w-full sm:w-full md:w-[30rem] lg:w-[50rem]">
+                      <div className="relative flex flex-row p-2 md:p-5 md:pl-[50px] justify-center md:justify-end">
+                        <div className="absolute w-[110px] -top-5 md:left-[20px] md:top-2">
+                          <img
+                            src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F149ae760-e4d0-11ed-8f73-7bdf9ddb359c.png&w=256&q=75"
+                            alt=""
+                          />
+                        </div>
+                        <div className="w-full p-2 sm:w-[18rem] md:w-full mx-auto md:p-5 pt-24 md:pl-20 bg-gray-200">
+                          <div className="">
+                            <p>
+                              <span className="text-2xl text-red-600 px-3 font-semibold border-r-[1px] border-r-gray-800">
+                                Jyoti
+                              </span>
+                              <span className="text-xl px-2">
+                                Rings & Bracelets
+                              </span>
+                            </p>
+                            <p className="text-lg px-4 pt-5">
+                              Hello everyone, This is jyoti from Punjab. Last
+                              year I got to know about Bhima jewellers on
+                              Facebook .then I ordered 2 rings and one bracelet
+                              .That's around 95 k after discount as well as we
+                              got 2gold coins .Moreover If talk about its purity
+                              its all 22karat.I am satisfied and happy to buy
+                              all amazing designs from Bhima jewellers.
+                            </p>
+                          </div>
+                          <div className=""></div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="review_card w-full sm:w-full md:w-[30rem] lg:w-[50rem]">
-                <div className="relative flex flex-row p-2 md:p-5 md:pl-[50px] justify-center md:justify-end">
-                  <div className="absolute w-[110px] -top-5 md:left-[20px] md:top-2">
-                    <img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F149ae760-e4d0-11ed-8f73-7bdf9ddb359c.png&w=256&q=75" alt="" />
-                  </div>
-                  <div className="w-full p-2 sm:w-[18rem] md:w-full mx-auto md:p-5 pt-24 md:pl-20 bg-gray-200">
-                    <div className="">
-                      <p>
-                        <span className="text-2xl text-red-600 px-3 font-semibold border-r-[1px] border-r-gray-800">
-                          Jyoti
-                        </span>
-                        <span className="text-xl px-2">Rings & Bracelets</span>
-                      </p>
-                      <p className="text-lg px-4 pt-5">
-                      Hello everyone, This is jyoti from Punjab. Last year I got to know about Bhima jewellers on Facebook .then I ordered 2 rings and one bracelet .That's around 95 k after discount as well as we got 2gold coins .Moreover If talk about its purity its all 22karat.I am satisfied and happy to buy all amazing designs from Bhima jewellers.
-                      </p>
-                    </div>
-                    <div className=""></div>
-                  </div>
-                </div>
-              </div>
-              <div className="review_card w-full sm:w-full md:w-[30rem] lg:w-[50rem]">
-                <div className="relative flex flex-row p-2 md:p-5 md:pl-[50px] justify-center md:justify-end">
-                  <div className="absolute w-[110px] -top-5 md:left-[20px] md:top-2">
-                    <img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F149ae760-e4d0-11ed-8f73-7bdf9ddb359c.png&w=256&q=75" alt="" />
-                  </div>
-                  <div className="w-full p-2 sm:w-[18rem] md:w-full mx-auto md:p-5 pt-24 md:pl-20 bg-gray-200">
-                    <div className="">
-                      <p>
-                        <span className="text-2xl text-red-600 px-3 font-semibold border-r-[1px] border-r-gray-800">
-                          Jyoti
-                        </span>
-                        <span className="text-xl px-2">Rings & Bracelets</span>
-                      </p>
-                      <p className="text-lg px-4 pt-5">
-                      Hello everyone, This is jyoti from Punjab. Last year I got to know about Bhima jewellers on Facebook .then I ordered 2 rings and one bracelet .That's around 95 k after discount as well as we got 2gold coins .Moreover If talk about its purity its all 22karat.I am satisfied and happy to buy all amazing designs from Bhima jewellers.
-                      </p>
-                    </div>
-                    <div className=""></div>
-                  </div>
-                </div>
+                <div className="slider__buttons">
+      <button className="slider__button" onClick={this.prevSlide}>
+        Previous
+      </button>
+      <button className="slider__button" onClick={this.nextSlide}>
+        Next
+      </button>
+    </div>
               </div>
             </div>
           </div>
           <div className="cntainer4">
             <div className="px-10">
-            <p className="heading1 font-serif font-medium text-3xl md:text-4xl lg:text-4xl mt-5">Bhima Gold Private Limited - The Official Online Store</p>
-            <p className="text-lg md:text-lg lg:text-xl mt-5">Welcome to the Online Home of Purity.</p>
+              <p className="heading1 font-serif font-medium text-3xl md:text-4xl lg:text-4xl mt-5">
+                Bhima Gold Private Limited - The Official Online Store
+              </p>
+              <p className="text-lg md:text-lg lg:text-xl mt-5">
+                Welcome to the Online Home of Purity.
+              </p>
             </div>
             <div className="py-10">
               <div className="relative py-20 bg-gradient-to-r from-gray-300 to-red-100">
-                <p className="heading1 font-serif font-medium text-center py-5 text-3xl md:text-4xl lg:text-4xl mt-5">Join Our Bhima Family</p>
-                <form className="flex flex-row flex-wrap md:flex-nowrap justify-center px-2 py-5 pb-20" action="./form" method="post">
+                <p className="heading1 font-serif font-medium text-center py-5 text-3xl md:text-4xl lg:text-4xl mt-5">
+                  Join Our Bhima Family
+                </p>
+                <form
+                  className="flex flex-row flex-wrap md:flex-nowrap justify-center px-2 py-5 pb-20"
+                  action="./form"
+                  method="post"
+                >
                   <div className="p-2 border-[1px] border-red-500 w-96">
-                  <input className=" text-black text-sm border-0 w-full outline-none bg-transparent" type="text" name="" id="" />
+                    <input
+                      className=" text-black text-sm border-0 w-full outline-none bg-transparent"
+                      type="text"
+                      name=""
+                      id=""
+                    />
                   </div>
-                  <button className="cursor-pointer my-4 lg:my-0 inline-flex items-center text-black text-lg mx-3 p-2 px-8 uppercase bg-gradient-to-r from-red-400 to-white hover: hover:drop-shadow-xl">Join us<span className="mx-2 material-symbols-outlined">north_east</span>
+                  <button className="cursor-pointer my-4 lg:my-0 inline-flex items-center text-black text-lg mx-3 p-2 px-8 uppercase bg-gradient-to-r from-red-400 to-white hover: hover:drop-shadow-xl">
+                    Join us
+                    <span className="mx-2 material-symbols-outlined">
+                      north_east
+                    </span>
                   </button>
                 </form>
-                <div className="absolute bottom-0 left-0  w-full h-12" style={{backgroundImage:`url('${decor}')`, backgroundPositionX:'-10px'}}></div>
+                <div
+                  className="absolute bottom-0 left-0  w-full h-12"
+                  style={{
+                    backgroundImage: `url('${decor}')`,
+                    backgroundPositionX: "-10px",
+                  }}
+                ></div>
               </div>
             </div>
           </div>

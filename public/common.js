@@ -78,3 +78,26 @@ function prev() {
     }
     initialize()
 }
+
+
+const slider = document.querySelector("[data-slider]");
+
+const track = slider.querySelector("[data-slider-track]");
+const prev = slider.querySelector("[data-slider-prev]");
+const next = slider.querySelector("[data-slider-next]");
+
+if (track) {
+  prev.addEventListener("click", () => {
+    track.scrollTo({
+      left: track.scrollLeft - track.firstElementChild.offsetWidth,
+      behavior: "smooth"
+    });
+  });
+
+  next.addEventListener("click", () => {
+    track.scrollTo({
+      left: track.scrollLeft + track.firstElementChild.offsetWidth,
+      behavior: "smooth"
+    });
+  });
+}
