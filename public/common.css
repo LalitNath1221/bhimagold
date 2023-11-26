@@ -27,7 +27,6 @@
     display: inline-block;
     height: 400px;
     width: 100%;
-    border-radius: 40px;
   }
   
   /* Buttons */
@@ -37,6 +36,7 @@
     position: absolute;
     transform-origin: center;
     left: 50%;
+    transform: translateX(-50%);
     bottom: 2rem;
   }
   
@@ -162,6 +162,7 @@
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
   }
+  
   .container_slider .slider::-webkit-scrollbar{
     display: none;
   }
@@ -171,11 +172,84 @@
     margin: 0%;
   }
 
+  #category-menu-dropdown{
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    background-color: white;
+  }
+  
+  .main_menu_container{
+    width: 100vw;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    transition: .3s ease-in-out;
+  }
+  .visible{
+    display: flex;
+    height: 100%;
+  }
+  .main_menu_container ul{
+    box-sizing: border-box;
+    width: 25%;
+    padding: 2rem 4rem;
+  }
+  .main_menu_container ul p{
+    font-size: 20px;
+    font-weight: 600;
+    padding-block: 5px;
+  }
+  .main_menu_container ul li a{
+    font-size: 18px;
+    padding-block: 5px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .main_menu_container ul li span{
+    margin-right: 10px;
+  }
+  
 
   @media (min-width: 640px) { 
     .trust_card{
         width: 20rem;
       }
+      
+   }
+   @media (max-width: 768px){
+    .collection_scrollbar{
+      display: grid !important;
+      grid-auto-flow: column;
+      scroll-behavior: auto;
+      gap: 1.2rem;
+      overflow-y: auto;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    }
+    
+    .collection_scrollbar::-webkit-scrollbar{
+      display: none;
+    }
+    .collection_card .text a{
+      font-size: 16px;
+    }
+    .collection_card .text p{
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .slide {
+      height: 300px
+    }
+    .slideshowDot {
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+    }
+    .footer_left ul li{
+      font-size: 12px;
+    }
    }
 
   @media (min-width: 768px) {

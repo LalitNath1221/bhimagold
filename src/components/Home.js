@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 import Carousal2 from "./Carousal2";
 import image4 from "../assets/media/image4.png";
 import image5 from "../assets/media/image5.png";
@@ -9,22 +9,21 @@ import collage1 from "../assets/media/collage1.png";
 import decor from "../assets/media/decor.png";
 
 export default class Home extends Component {
-
   prevSlide = () => {
     const track = document.getElementById("review_slider");
     track.scrollTo({
       left: track.scrollLeft - track.firstElementChild.offsetWidth,
-      behavior: "smooth"
+      behavior: "smooth",
     });
-  }
+  };
 
   nextSlide = () => {
     const track = document.getElementById("review_slider");
     track.scrollTo({
       left: track.scrollLeft + track.firstElementChild.offsetWidth,
-      behavior: "smooth"
+      behavior: "smooth",
     });
-  }
+  };
 
   render() {
     return (
@@ -32,8 +31,8 @@ export default class Home extends Component {
         <Carousal2 />
         <div className="">
           <div className="container1 lg:container lg:mx-auto flex flex-col md:flex-row py-10 justify-center items-center">
-            <div className="text_part px-10">
-              <p className="heading1 font-serif py-2 sm:text-3xl lg:text-5xl font-medium">
+            <div className="text_part px-5 md:px-10">
+              <p className="heading1 font-serif py-2 text-2xl md:text-4xl lg:text-5xl font-medium">
                 Choose what fits your style from our exquisite collections
               </p>
               <p className="text1 text-lg px-5 py-3">
@@ -42,7 +41,7 @@ export default class Home extends Component {
               </p>
               <a
                 href="./gwgagjhdgfy"
-                className="cursor-pointer inline-block mx-5 p-4  uppercase border-b-4 border-b-red-400 border-b-white hover:border-b-red-600"
+                className="cursor-pointer inline-block mx-5 p-4  uppercase border-b-4 border-b-red-400 hover:border-b-red-600"
               >
                 View Collection
                 <span className="mx-2 material-symbols-outlined">
@@ -69,8 +68,8 @@ export default class Home extends Component {
             <div>
               <p className="heading1 text-5xl px-3">Shop By Category</p>
             </div>
-            <div className="flex flex-row flex-wrap justify-center py-12">
-              <div className="category_card w-56 cursor-pointer">
+            <div className="grid grid-cols-2 sm:grid-cols-6 place-items-center justify-center py-12">
+              <div className="category_card max-w-[14rem] cursor-pointer">
                 <div className="image">
                   <img
                     src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F6ec841b0-ddaa-11ed-9ffd-a59b95d88e3f.jpeg&w=512&q=75"
@@ -81,7 +80,7 @@ export default class Home extends Component {
                   <p className="text-center text-2xl py-2">Bangles</p>
                 </div>
               </div>
-              <div className="category_card w-56 cursor-pointer">
+              <div className="category_card max-w-[14rem] cursor-pointer">
                 <div className="image">
                   <img
                     src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F6028d160-ddaa-11ed-9ffd-a59b95d88e3f.jpeg&w=512&q=75"
@@ -92,7 +91,7 @@ export default class Home extends Component {
                   <p className="text-center text-2xl py-2">Chains</p>
                 </div>
               </div>
-              <div className="category_card w-56 cursor-pointer">
+              <div className="category_card max-w-[14rem] cursor-pointer">
                 <div className="image">
                   <img
                     src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F663e2140-ddaa-11ed-9ffd-a59b95d88e3f.jpeg&w=512&q=75"
@@ -103,7 +102,7 @@ export default class Home extends Component {
                   <p className="text-center text-2xl py-2">Earrings</p>
                 </div>
               </div>
-              <div className="category_card w-56 cursor-pointer">
+              <div className="category_card max-w-[14rem] cursor-pointer ">
                 <div className="image">
                   <img
                     src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F44e04280-ddaa-11ed-9ffd-a59b95d88e3f.jpeg&w=512&q=75"
@@ -114,7 +113,7 @@ export default class Home extends Component {
                   <p className="text-center text-2xl py-2">Neckwears</p>
                 </div>
               </div>
-              <div className="category_card w-56 cursor-pointer">
+              <div className="category_card max-w-[14rem] cursor-pointer ">
                 <div className="image">
                   <img
                     src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F4dcbe3e0-ddaa-11ed-9ffd-a59b95d88e3f.jpeg&w=512&q=75"
@@ -125,7 +124,7 @@ export default class Home extends Component {
                   <p className="text-center text-2xl py-2">Pendants</p>
                 </div>
               </div>
-              <div className="category_card w-56 cursor-pointer">
+              <div className="category_card max-w-[14rem] cursor-pointer ">
                 <div className="image">
                   <img
                     src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F56955740-ddaa-11ed-9ffd-a59b95d88e3f.jpeg&w=512&q=75"
@@ -138,14 +137,14 @@ export default class Home extends Component {
               </div>
             </div>
           </div>
-          <div className="container_collection">
+          <div className="container_collection px-3">
             <div>
-              <p className="heading1 text-5xl px-3">
+              <p className="heading1 text-3xl md:text-4xl lg:text-5xl">
                 Indulge in our Exquisite Collections
               </p>
             </div>
-            <div className="flex flex-row flex-wrap justify-center py-12">
-              <div className="collection_card">
+            <div className="collection_scrollbar grid md:grid-cols-2 lg:grid-cols-3 place-items-center gap-4 py-12">
+              <div className="w-full min-w-[260px] collection_card">
                 <div className="image">
                   <img
                     src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fd0bdad90-ac56-11ed-be31-5bb5d11d30d5.jpeg&w=1200&q=75"
@@ -167,7 +166,7 @@ export default class Home extends Component {
                   </p>
                 </div>
               </div>
-              <div className="collection_card">
+              <div className="w-full min-w-[260px] collection_card">
                 <div className="image">
                   <img
                     src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fdf82a740-ac56-11ed-be31-5bb5d11d30d5.jpeg&w=1200&q=75"
@@ -189,7 +188,7 @@ export default class Home extends Component {
                   </p>
                 </div>
               </div>
-              <div className="collection_card">
+              <div className="w-full min-w-[260px] collection_card">
                 <div className="image">
                   <img
                     src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fde39e6f0-fed1-11ed-ae4c-0527742d8275.jpeg&w=1200&q=75"
@@ -211,7 +210,7 @@ export default class Home extends Component {
                   </p>
                 </div>
               </div>
-              <div className="collection_card">
+              <div className="w-full min-w-[260px] collection_card">
                 <div className="image">
                   <img
                     src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F10cc1da0-c6eb-11ed-8dba-793eaa79d659.jpeg&w=1200&q=75"
@@ -233,7 +232,7 @@ export default class Home extends Component {
                   </p>
                 </div>
               </div>
-              <div className="collection_card">
+              <div className="w-full min-w-[260px] collection_card">
                 <div className="image">
                   <img
                     src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F5981b890-ed9f-11ed-860c-edd8d4ddeb9f.jpeg&w=1200&q=75"
@@ -255,7 +254,7 @@ export default class Home extends Component {
                   </p>
                 </div>
               </div>
-              <div className="collection_card">
+              <div className="w-full min-w-[260px] collection_card">
                 <div className="image">
                   <img
                     src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F0049e390-c6eb-11ed-8dba-793eaa79d659.jpeg&w=1200&q=75"
@@ -321,12 +320,12 @@ export default class Home extends Component {
               </div>
             </div>
           </div>
-          <div className="container_gender">
+          <div className="container_gender py-10">
             <div>
               <p className="heading1 text-5xl px-3">Shop By Gender</p>
             </div>
-            <div className="flex flex-row flex-wrap justify-center py-12">
-              <div className="category_card sm:w-40 md:w-80 lg:w-96 cursor-pointer">
+            <div className="collection_scrollbar md:flex flex-row flex-nowrap sm:justify-evenly py-12">
+              <div className="category_card min-w-[260px] md:w-80 lg:w-96 cursor-pointer">
                 <div className="image">
                   <img
                     src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fb6d8b100-d450-11ed-8126-d10bf5c76bdf.jpeg&w=1200&q=75"
@@ -337,7 +336,7 @@ export default class Home extends Component {
                   <p className="text-center text-2xl py-2">Women</p>
                 </div>
               </div>
-              <div className="category_card sm:w-40 md:w-80 lg:w-96 cursor-pointer">
+              <div className="category_card min-w-[260px] md:w-80 lg:w-96 cursor-pointer">
                 <div className="image">
                   <img
                     src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F7705b100-d44f-11ed-8126-d10bf5c76bdf.jpeg&w=1200&q=75"
@@ -348,7 +347,7 @@ export default class Home extends Component {
                   <p className="text-center text-2xl py-2">Men</p>
                 </div>
               </div>
-              <div className="category_card sm:w-40 md:w-80 lg:w-96 cursor-pointer">
+              <div className="category_card min-w-[260px] md:w-80 lg:w-96 cursor-pointer">
                 <div className="image">
                   <img
                     src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F7d20cd40-d44f-11ed-8126-d10bf5c76bdf.jpeg&w=1200&q=75"
@@ -363,13 +362,13 @@ export default class Home extends Component {
           </div>
           <div className="container3 py-8">
             <div className="px-5">
-              <div className="flex flex-row flex-wrap-reverse md:flex-nowrap px-10 items-center">
+              <div className="flex flex-row flex-wrap-reverse md:flex-nowrap px-5 md:px-10 items-center">
                 <div className="w-full md:w-3/5 h-fit">
                   <div className="pl-5">
                     <p className="headin1 text-3xl md:text-4xl lg:text-6xl py-4">
                       Bhima My Choice
                     </p>
-                    <p className="text-gray-700 text-2xl md:text-3xl lg:text-4xl py-4">
+                    <p className="text-gray-700 text-lg md:text-3xl lg:text-4xl py-4">
                       Join our EMA Jewellery Purchase Plan and avail exciting
                       benefits
                     </p>
@@ -398,55 +397,100 @@ export default class Home extends Component {
                 Bhima's Trust
               </p>
             </div>
-            <div className="flex flex-row flex-wrap justify-center items-center py-10">
-              <div className="trust_card flex flex-col justify-center items-center m-1">
-                <div className="w-20">
+            <div className="grid grid-cols-2 lg:grid-cols-3 place-items-center py-10">
+              <div className="w-full trust_card flex flex-col justify-center items-center m-1">
+                <div className="w-12 sm:w-16 md:w-20">
                   <img
                     src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F9d20adf0-203a-11ed-bf3f-cb401eafe67a.png&w=128&q=75"
                     alt=""
                   />
                 </div>
-                <p className="text-xl font-semibold text-center mx-3 py-2">
+                <p className="text-base sm:text-lg md:text-xl font-semibold text-center mx-3 py-2">
                   BIS 916 Hallmarked Products
                 </p>
-                <p className="text-lg   text-center mx-3 py-2">
+                <p className="text-sm sm:text-base md:text-lg text-center mx-3 py-2">
                   The purity determines the trust factor of a jewellery as much
                   as we say
                 </p>
               </div>
-              <div className="trust_card flex flex-col justify-center items-center m-1">
-                <div className="w-20">
+              <div className="w-full trust_card flex flex-col justify-center items-center m-1">
+                <div className="w-12 sm:w-16 md:w-20">
                   <img
                     src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fbc006d50-203a-11ed-bf3f-cb401eafe67a.png&w=128&q=75"
                     alt=""
                   />
                 </div>
-                <p className="text-xl font-semibold text-center mx-3 py-2">
+                <p className="text-base sm:text-lg md:text-xl font-semibold text-center mx-3 py-2">
                   Certified Diamonds
                 </p>
-                <p className="text-lg   text-center mx-3 py-2">
+                <p className="text-sm sm:text-base md:text-lg   text-center mx-3 py-2">
                   Every diamond passes through internal quality tests with IGI-
                   GIA certification
                 </p>
               </div>
-              <div className="trust_card flex flex-col justify-center items-center m-1">
-                <div className="w-20">
+              <div className="w-full trust_card flex flex-col justify-center items-center m-1">
+                <div className="w-12 sm:w-16 md:w-20">
                   <img
                     src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fce9840f0-203a-11ed-bf3f-cb401eafe67a.png&w=128&q=75"
                     alt=""
                   />
                 </div>
-                <p className="text-xl font-semibold text-center mx-3 py-2">
+                <p className="text-base sm:text-lg md:text-xl font-semibold text-center mx-3 py-2">
                   Transparent Billing
                 </p>
-                <p className="text-lg   text-center mx-3 py-2">
+                <p className="text-sm sm:text-base md:text-lg   text-center mx-3 py-2">
+                  Every piece of jewellery has accurate and detailed breakup to
+                  assure complete transparency
+                </p>
+              </div>
+              <div className="w-full trust_card flex flex-col justify-center items-center m-1">
+                <div className="w-12 sm:w-16 md:w-20">
+                  <img
+                    src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F9d20adf0-203a-11ed-bf3f-cb401eafe67a.png&w=128&q=75"
+                    alt=""
+                  />
+                </div>
+                <p className="text-base sm:text-lg md:text-xl font-semibold text-center mx-3 py-2">
+                  BIS 916 Hallmarked Products
+                </p>
+                <p className="text-sm sm:text-base md:text-lg   text-center mx-3 py-2">
+                  The purity determines the trust factor of a jewellery as much
+                  as we say
+                </p>
+              </div>
+              <div className="w-full trust_card flex flex-col justify-center items-center m-1">
+                <div className="w-12 sm:w-16 md:w-20">
+                  <img
+                    src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fbc006d50-203a-11ed-bf3f-cb401eafe67a.png&w=128&q=75"
+                    alt=""
+                  />
+                </div>
+                <p className="text-base sm:text-lg md:text-xl font-semibold text-center mx-3 py-2">
+                  Certified Diamonds
+                </p>
+                <p className="text-sm sm:text-base md:text-lg   text-center mx-3 py-2">
+                  Every diamond passes through internal quality tests with IGI-
+                  GIA certification
+                </p>
+              </div>
+              <div className="w-full trust_card flex flex-col justify-center items-center m-1">
+                <div className="w-12 sm:w-16 md:w-20">
+                  <img
+                    src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fce9840f0-203a-11ed-bf3f-cb401eafe67a.png&w=128&q=75"
+                    alt=""
+                  />
+                </div>
+                <p className="text-base sm:text-lg md:text-xl font-semibold text-center mx-3 py-2">
+                  Transparent Billing
+                </p>
+                <p className="text-sm sm:text-base md:text-lg   text-center mx-3 py-2">
                   Every piece of jewellery has accurate and detailed breakup to
                   assure complete transparency
                 </p>
               </div>
             </div>
           </div>
-          <div className="container_store py-10">
+          <div className="container_store my-5 md:py-10">
             <div>
               <div className="flex flex-col md:flex-row justify-center items-center">
                 <div className="flex flex-col justify-start px-5 md:w-1/2  lg:px-10">
@@ -477,34 +521,46 @@ export default class Home extends Component {
             </div>
           </div>
           <div className="container_customer py-10">
-            <div>
-              <p className="heading1 font-medium text-center text-5xl px-3">
+            <div className="flex flex-row justify-between p-4">
+              <p className="heading1 font-medium text-3xl lg:text-5xl px-3 text-left">
                 What Our Customers Say
               </p>
+              <div className="slider__buttons flex flex-row flex-nowrap">
+                <button className="slider__button" onClick={this.prevSlide}>
+                  <span className="material-symbols-outlined text-[30px]">
+                    arrow_left_alt
+                  </span>
+                </button>
+                <button className="slider__button" onClick={this.nextSlide}>
+                  <span className="material-symbols-outlined ml-4 text-[30px]">
+                    arrow_right_alt
+                  </span>
+                </button>
+              </div>
             </div>
             <div className="container_review_card py-10">
               <div className="container_slider" data-slider>
                 <div id="review_slider" className="slider" data-slider-track>
                   <div className="slider_card_container">
-                    <div className="review_card w-full sm:w-full md:w-[30rem] lg:w-[50rem]">
-                      <div className="relative flex flex-row p-2 md:p-5 md:pl-[50px] justify-center md:justify-end">
-                        <div className="absolute w-[110px] -top-5 md:left-[20px] md:top-2">
+                    <div className="review_card">
+                      <div className="relative flex flex-row min-w-[350px] w-[90vw] md:w-[80vw] lg:w-[60vw] flex-nowrap pt-[30px] pl-[50px] justify-end">
+                        <div className="absolute w-[110px] left-[20px] top-[5px]">
                           <img
                             src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F149ae760-e4d0-11ed-8f73-7bdf9ddb359c.png&w=256&q=75"
                             alt=""
                           />
                         </div>
-                        <div className="w-full p-2 sm:w-[18rem] md:w-full mx-auto md:p-5 pt-24 md:pl-20 bg-gray-200">
-                          <div className="">
-                            <p>
-                              <span className="text-2xl text-red-600 px-3 font-semibold border-r-[1px] border-r-gray-800">
+                        <div className="w-full mx-auto p-[10px] md:p-[20px] pt-[40px] md:pl-[80px] bg-gray-200">
+                          <div className="flex flex-col items-center md:items-start">
+                            <p className="block ml-[40px] md:ml-0">
+                              <span className="block md:inline text-2xl text-red-600 px-3 font-semibold md:border-r-[1px] md:border-r-gray-800">
                                 Jyoti
                               </span>
-                              <span className="text-xl px-2">
+                              <span className="block md:inline text-sm md:text-xl px-2">
                                 Rings & Bracelets
                               </span>
                             </p>
-                            <p className="text-lg px-4 pt-5">
+                            <p className="text-sm md:text-lg px-4 pt-5 line-clamp-4">
                               Hello everyone, This is jyoti from Punjab. Last
                               year I got to know about Bhima jewellers on
                               Facebook .then I ordered 2 rings and one bracelet
@@ -520,25 +576,25 @@ export default class Home extends Component {
                     </div>
                   </div>
                   <div className="slider_card_container">
-                    <div className="review_card w-full sm:w-full md:w-[30rem] lg:w-[50rem]">
-                      <div className="relative flex flex-row p-2 md:p-5 md:pl-[50px] justify-center md:justify-end">
-                        <div className="absolute w-[110px] -top-5 md:left-[20px] md:top-2">
+                  <div className="review_card">
+                      <div className="relative flex flex-row min-w-[350px] w-[90vw] md:w-[80vw] lg:w-[60vw] flex-nowrap pt-[30px] pl-[50px] justify-end">
+                        <div className="absolute w-[110px] left-[20px] top-[5px]">
                           <img
                             src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F149ae760-e4d0-11ed-8f73-7bdf9ddb359c.png&w=256&q=75"
                             alt=""
                           />
                         </div>
-                        <div className="w-full p-2 sm:w-[18rem] md:w-full mx-auto md:p-5 pt-24 md:pl-20 bg-gray-200">
-                          <div className="">
-                            <p>
-                              <span className="text-2xl text-red-600 px-3 font-semibold border-r-[1px] border-r-gray-800">
+                        <div className="w-full mx-auto p-[10px] md:p-[20px] pt-[40px] md:pl-[80px] bg-gray-200">
+                          <div className="flex flex-col items-center md:items-start">
+                            <p className="block ml-[40px] md:ml-0">
+                              <span className="block md:inline text-2xl text-red-600 px-3 font-semibold md:border-r-[1px] md:border-r-gray-800">
                                 Jyoti
                               </span>
-                              <span className="text-xl px-2">
+                              <span className="block md:inline text-sm md:text-xl px-2">
                                 Rings & Bracelets
                               </span>
                             </p>
-                            <p className="text-lg px-4 pt-5">
+                            <p className="text-sm md:text-lg px-4 pt-5 line-clamp-4">
                               Hello everyone, This is jyoti from Punjab. Last
                               year I got to know about Bhima jewellers on
                               Facebook .then I ordered 2 rings and one bracelet
@@ -554,25 +610,25 @@ export default class Home extends Component {
                     </div>
                   </div>
                   <div className="slider_card_container">
-                    <div className="review_card w-full sm:w-full md:w-[30rem] lg:w-[50rem]">
-                      <div className="relative flex flex-row p-2 md:p-5 md:pl-[50px] justify-center md:justify-end">
-                        <div className="absolute w-[110px] -top-5 md:left-[20px] md:top-2">
+                  <div className="review_card">
+                      <div className="relative flex flex-row min-w-[350px] w-[90vw] md:w-[80vw] lg:w-[60vw] flex-nowrap pt-[30px] pl-[50px] justify-end">
+                        <div className="absolute w-[110px] left-[20px] top-[5px]">
                           <img
                             src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F149ae760-e4d0-11ed-8f73-7bdf9ddb359c.png&w=256&q=75"
                             alt=""
                           />
                         </div>
-                        <div className="w-full p-2 sm:w-[18rem] md:w-full mx-auto md:p-5 pt-24 md:pl-20 bg-gray-200">
-                          <div className="">
-                            <p>
-                              <span className="text-2xl text-red-600 px-3 font-semibold border-r-[1px] border-r-gray-800">
+                        <div className="w-full mx-auto p-[10px] md:p-[20px] pt-[40px] md:pl-[80px] bg-gray-200">
+                          <div className="flex flex-col items-center md:items-start">
+                            <p className="block ml-[40px] md:ml-0">
+                              <span className="block md:inline text-2xl text-red-600 px-3 font-semibold md:border-r-[1px] md:border-r-gray-800">
                                 Jyoti
                               </span>
-                              <span className="text-xl px-2">
+                              <span className="block md:inline text-sm md:text-xl px-2">
                                 Rings & Bracelets
                               </span>
                             </p>
-                            <p className="text-lg px-4 pt-5">
+                            <p className="text-sm md:text-lg px-4 pt-5 line-clamp-4">
                               Hello everyone, This is jyoti from Punjab. Last
                               year I got to know about Bhima jewellers on
                               Facebook .then I ordered 2 rings and one bracelet
@@ -588,19 +644,11 @@ export default class Home extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="slider__buttons">
-      <button className="slider__button" onClick={this.prevSlide}>
-        Previous
-      </button>
-      <button className="slider__button" onClick={this.nextSlide}>
-        Next
-      </button>
-    </div>
               </div>
             </div>
           </div>
           <div className="cntainer4">
-            <div className="px-10">
+            <div className="px-5 md:px-10">
               <p className="heading1 font-serif font-medium text-3xl md:text-4xl lg:text-4xl mt-5">
                 Bhima Gold Private Limited - The Official Online Store
               </p>
@@ -618,7 +666,7 @@ export default class Home extends Component {
                   action="./form"
                   method="post"
                 >
-                  <div className="p-2 border-[1px] border-red-500 w-96">
+                  <div className="p-2 bg-white border-[1px] border-red-500 w-96">
                     <input
                       className=" text-black text-sm border-0 w-full outline-none bg-transparent"
                       type="text"

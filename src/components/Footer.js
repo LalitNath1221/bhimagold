@@ -9,7 +9,7 @@ export default class Footer extends Component {
           <div className="footer_left  w-full lg:w-2/3">
             <div className="flex flex-row">
               <div className="px-2 md:px-5 lg:px-10">
-                <p className="text-lg font-medium">About us</p>
+                <p className="text-base sm:text-lg font-medium">About us</p>
                 <ul>
                   <li>Our Legacy</li>
                   <li>Our Stores</li>
@@ -18,7 +18,7 @@ export default class Footer extends Component {
                 </ul>
               </div>
               <div className="px-2 md:px-5 lg:px-10">
-                <p className="text-lg font-medium">Policies</p>
+                <p className="text-base sm:text-lg font-medium">Policies</p>
                 <ul>
                   <li>Returns & Refunds</li>
                   <li>Terms & Conditions</li>
@@ -28,7 +28,7 @@ export default class Footer extends Component {
                 </ul>
               </div>
               <div className="px-2 md:px-5 lg:px-10">
-                <p className="text-lg font-medium">Usefull links</p>
+                <p className="text-base sm:text-lg font-medium">Usefull links</p>
                 <ul>
                   <li>Book Appointment</li>
                   <li>FAQs</li>
@@ -83,7 +83,7 @@ export default class Footer extends Component {
             <li className="mx-2">
               <img className="w-40" src={logo} alt="" />
             </li>
-            <li className="mx-2">
+            <li className="mx-2 text-xs md:text-sm">
               <p>Copyright © 2023 | Bhima Gold</p>
               <p>2.0.48</p>
             </li>

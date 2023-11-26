@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React, { Component } from 'react'
 import Footer from './components/Footer';
+import MobileNav from './components/MobileNav';
 
 export default class App extends Component {
   render() {
@@ -17,6 +18,7 @@ export default class App extends Component {
         </Route>
       </Routes>
       <Footer/>
+      <MobileNav/>
     </BrowserRouter>
       </>
     )

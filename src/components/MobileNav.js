@@ -1,97 +1,32 @@
 import React, { Component } from "react";
-import whatsapp from "../assets/media/WhatsApp (2).png";
-import logo from "../assets/media/logo.png";
-import india from "../assets/media/india1.png";
 
-export default class Navbar extends Component {
-
-  displayMenu(index){
-    console.log(index);
-    const menu = document.getElementsByClassName("main_menu_container");
-    menu[index-1].classList.toggle('visible');
-  }
-
+export default class MobileNav extends Component {
   render() {
     return (
-      <nav className="">
-        <div id="contact-header" className="flex flex-row justify-between items-center bg-red-800 px-5">
+      <nav className="mobile_navbar sticky bottom-0 bg-white border-t-[1px] rounded-t-md md:hidden">
+        <div className="flex flex-row w-screen justify-around p-5">
           <div>
-            <ul className="flex flex-row space-x-5 text-white text-sm font-sans">
-              <li className="py-2 hidden sm:block">Gold Rate 24 KT (999) : ₹ 6,150.00/g</li>
-              <li className="py-2 hidden md:block">Gold Rate 18 KT (750) : ₹ 4,609.00/g</li>
-              <li className="py-2 hidden md:block">Silver Rate : ₹ 75.25/g</li>
-              <li className="py-2 hidden md:block">Gold Rate 22 KT (916) : ₹ 5,609.00/g</li>
-            </ul>
+            <a className="cursor-pointer" href="./">
+              <span className="text-[28px] material-symbols-outlined">home</span>
+            </a>
           </div>
           <div>
-            <ul className="flex flex-row">
-              <li className="px-4 cursor-pointer">
-                <img className="w-5" src={whatsapp} alt="" />
-              </li>
-              <li className="px-4 cursor-pointer">
-                <span className="text-white material-symbols-outlined">
-                  call
-                </span>
-              </li>
-              <li className="px-4 cursor-pointer">
-                <span className="text-white material-symbols-outlined">
-                  mail
-                </span>
-              </li>
-            </ul>
+            <button className="cursor-pointer">
+              <span className="text-[28px] material-symbols-outlined">grid_view</span>
+            </button>
+          </div>
+          <div>
+            <a className="cursor-pointer" href="">
+              <span className="text-[28px] material-symbols-outlined">local_mall</span>
+            </a>
+          </div>
+          <div>
+            <button className="cursor-pointer">
+              <span className="text-[28px] material-symbols-outlined">person</span>
+            </button>
           </div>
         </div>
-        <div>
-          <div className="flex flex-row justify-between px-5 py-5">
-            <ul className="flex flex-row justify-between w-full md:w-auto items-center">
-              <li className="mx-2">
-                <img className="w-40" src={logo} alt="" />
-              </li>
-              <li className="mx-4">
-                <div className="flex flex-row p-[5px] md:border-[1px] border-gray-400 md:w-[18rem] justify-center items-center">
-                    <span className="material-symbols-outlined w-[20px] leading-[20px]">search</span>
-                    <input
-                      className="text-black w-full text-[18px] outline-none px-[5px] hidden md:block"
-                      type="text"
-                      name="searchText"
-                      id=""
-                    />
-                </div>
-              </li>
-              <li className="mx-2 hidden lg:block">
-                <a className="px-3 py-3 bg-gradient-to-r from-red-500 to-pink-400 transition ease-in-out hover:drop-shadow-xl text-black mx-2" href="#">
-                  Gift Card
-                </a>
-                <a className="px-3 py-3 bg-gradient-to-r from-red-500 to-pink-400 transition ease-in-out hover:drop-shadow-xl text-black mx-2" href="#">
-                  Bhima my choice
-                </a>
-              </li>
-            </ul>
-            <ul id="navbar_menu_2" className="flex-row justify-between hidden md:flex">
-              <li className="px-3 py-2">
-                <a className="cursor-pointer " href="#">
-                  <span className="material-symbols-outlined">location_on</span>
-                </a>
-              </li>
-              <li className="px-3 py-2">
-                <a className="cursor-pointer " href="#">
-                  <span className="material-symbols-outlined">person</span>
-                </a>
-              </li>
-              <li className="px-3 py-2">
-                <a className="cursor-pointer " href="#">
-                  <span className="material-symbols-outlined">local_mall</span>
-                </a>
-              </li>
-              <li className="px-3 py-2">
-                <button>
-                  <img className="w-7" src={india} alt="" />
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div id="jwelCategory" className="relative hidden md:flex">
+        <div className="relative hidden">
             <div className="">
                 <ul className="flex flex-row">
                     <li onMouseOver={()=>this.displayMenu(1)} onMouseLeave={()=>this.displayMenu(1)} className="category_btn">EARRINGS</li>
