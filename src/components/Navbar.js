@@ -6,7 +6,6 @@ import india from "../assets/media/india1.png";
 export default class Navbar extends Component {
 
   displayMenu(index){
-    console.log(index);
     const menu = document.getElementsByClassName("main_menu_container");
     menu[index-1].classList.toggle('visible');
   }
@@ -16,8 +15,8 @@ export default class Navbar extends Component {
       <nav className="">
         <div id="contact-header" className="flex flex-row justify-between items-center bg-red-800 px-5">
           <div>
-            <ul className="flex flex-row space-x-5 text-white text-sm font-sans">
-              <li className="py-2 hidden sm:block">Gold Rate 24 KT (999) : ₹ 6,150.00/g</li>
+            <ul className="flex flex-row space-x-5 text-white text-xs sm:text-sm font-sans">
+              <li className="py-2 block ">Gold Rate 24 KT (999) : ₹ 6,150.00/g</li>
               <li className="py-2 hidden md:block">Gold Rate 18 KT (750) : ₹ 4,609.00/g</li>
               <li className="py-2 hidden md:block">Silver Rate : ₹ 75.25/g</li>
               <li className="py-2 hidden md:block">Gold Rate 22 KT (916) : ₹ 5,609.00/g</li>
@@ -25,15 +24,15 @@ export default class Navbar extends Component {
           </div>
           <div>
             <ul className="flex flex-row">
-              <li className="px-4 cursor-pointer">
+              <li className="px-2 sm:px-4 cursor-pointer">
                 <img className="w-5" src={whatsapp} alt="" />
               </li>
-              <li className="px-4 cursor-pointer">
+              <li className="px-2 sm:px-4 cursor-pointer">
                 <span className="text-white material-symbols-outlined">
                   call
                 </span>
               </li>
-              <li className="px-4 cursor-pointer">
+              <li className="px-2 sm:px-4 cursor-pointer">
                 <span className="text-white material-symbols-outlined">
                   mail
                 </span>

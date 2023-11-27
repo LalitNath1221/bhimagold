@@ -1,44 +1,34 @@
 import React, { Component } from "react";
 
 export default class MobileNav extends Component {
+
+    showMenu(){
+        const menu =document.getElementById("mobile-menu");
+        menu.classList.toggle('show_mobile');
+        console.log("working")
+    }
+    displayMenu(index){
+        const menu = document.getElementsByClassName("mobile_sub_menu");
+        menu[index-1].classList.toggle('visible');
+      }
   render() {
     return (
-      <nav className="mobile_navbar sticky bottom-0 bg-white border-t-[1px] rounded-t-md md:hidden">
-        <div className="flex flex-row w-screen justify-around p-5">
-          <div>
-            <a className="cursor-pointer" href="./">
-              <span className="text-[28px] material-symbols-outlined">home</span>
-            </a>
-          </div>
-          <div>
-            <button className="cursor-pointer">
-              <span className="text-[28px] material-symbols-outlined">grid_view</span>
-            </button>
-          </div>
-          <div>
-            <a className="cursor-pointer" href="">
-              <span className="text-[28px] material-symbols-outlined">local_mall</span>
-            </a>
-          </div>
-          <div>
-            <button className="cursor-pointer">
-              <span className="text-[28px] material-symbols-outlined">person</span>
-            </button>
-          </div>
-        </div>
-        <div className="relative hidden">
+        <>
+        <div id="mobile-menu" className="hidden w-[100vw] h-[100vh] overflow-hidden">
             <div className="">
-                <ul className="flex flex-row">
-                    <li onMouseOver={()=>this.displayMenu(1)} onMouseLeave={()=>this.displayMenu(1)} className="category_btn">EARRINGS</li>
-                    <li onMouseOver={()=>this.displayMenu(2)} onMouseLeave={()=>this.displayMenu(2)} className="category_btn">BANGLES</li>
-                    <li onMouseOver={()=>this.displayMenu(3)} onMouseLeave={()=>this.displayMenu(3)} className="category_btn">CHAINS</li>
-                    <li onMouseOver={()=>this.displayMenu(4)} onMouseLeave={()=>this.displayMenu(4)} className="category_btn">RINGS</li>
-                    <li onMouseOver={()=>this.displayMenu(5)} onMouseLeave={()=>this.displayMenu(5)} className="category_btn">COINS & BARS</li>
-                    <li onMouseOver={()=>this.displayMenu(6)} onMouseLeave={()=>this.displayMenu(6)} className="category_btn hidden lg:block">ALL JEWELLERY</li>
-                    <li onMouseOver={()=>this.displayMenu(7)} onMouseLeave={()=>this.displayMenu(7)} className="category_btn hidden lg:block">COLLECTIONS</li>
-                </ul>
-                <ul id="category-menu-dropdown">
-                  <li className="main_menu_container EARRINGS">
+                
+                <ul className="flex flex-col py-10">
+                    <p className="px-4">Menu</p>
+                <li className="mx-2 py-5">
+                <a className="px-3 py-3 bg-gradient-to-r from-red-500 to-pink-400 transition ease-in-out hover:drop-shadow-xl text-black mx-2" href="#">
+                  Gift Card
+                </a>
+                <a className="px-3 py-3 bg-gradient-to-r from-red-500 to-pink-400 transition ease-in-out hover:drop-shadow-xl text-black mx-2" href="#">
+                  Bhima my choice
+                </a>
+              </li>
+                    <li onClick={()=>this.displayMenu(1)}className="category_btn py-2 text-xl">EARRINGS</li>
+                    <li className="mobile_sub_menu main_menu_container EARRINGS">
                     <ul>
                       <p>Shop by metal</p>
                       <li><a href="./category-metal"><span><img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fd1e3e400-ca24-11ed-8b58-f33a71fa0958.png&w=32&q=75" alt="" /></span> Gold</a></li>
@@ -62,7 +52,8 @@ export default class MobileNav extends Component {
                       <li><a href="./category-metal"><span><img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fd1e3e400-ca24-11ed-8b58-f33a71fa0958.png&w=32&q=75" alt="" /></span> Kids</a></li>
                     </ul>
                   </li>
-                  <li className="main_menu_container">
+                    <li onClick={()=>this.displayMenu(2)} className="category_btn py-2 text-xl">BANGLES</li>
+                    <li className="mobile_sub_menu main_menu_container">
                     <ul>
                       <p>Shop by metal</p>
                       <li><a href="./category-metal"><span><img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fd1e3e400-ca24-11ed-8b58-f33a71fa0958.png&w=32&q=75" alt="" /></span> Gold</a></li>
@@ -86,7 +77,8 @@ export default class MobileNav extends Component {
                       <li><a href="./category-metal"><span><img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fd1e3e400-ca24-11ed-8b58-f33a71fa0958.png&w=32&q=75" alt="" /></span> Kids</a></li>
                     </ul>
                   </li>
-                  <li className="main_menu_container">
+                    <li onClick={()=>this.displayMenu(3)} className="category_btn py-2 text-xl">CHAINS</li>
+                    <li className="mobile_sub_menu main_menu_container">
                     <ul>
                       <p>Shop by metal</p>
                       <li><a href="./category-metal"><span><img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fd1e3e400-ca24-11ed-8b58-f33a71fa0958.png&w=32&q=75" alt="" /></span> Gold</a></li>
@@ -111,7 +103,8 @@ export default class MobileNav extends Component {
                       <li><a href="./category-metal"><span><img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fd1e3e400-ca24-11ed-8b58-f33a71fa0958.png&w=32&q=75" alt="" /></span> Kids</a></li>
                     </ul>
                   </li>
-                  <li className="main_menu_container">
+                    <li onClick={()=>this.displayMenu(4)} className="category_btn py-2 text-xl">RINGS</li>
+                    <li className="mobile_sub_menu main_menu_container">
                     <ul>
                       <p>Shop by metal</p>
                       <li><a href="./category-metal"><span><img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fd1e3e400-ca24-11ed-8b58-f33a71fa0958.png&w=32&q=75" alt="" /></span> Gold</a></li>
@@ -136,7 +129,8 @@ export default class MobileNav extends Component {
                       <li><a href="./category-metal"><span><img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fd1e3e400-ca24-11ed-8b58-f33a71fa0958.png&w=32&q=75" alt="" /></span> Kids</a></li>
                     </ul>
                   </li>
-                  <li className="main_menu_container COIN">
+                    <li onClick={()=>this.displayMenu(5)} className="category_btn py-2 text-xl">COINS & BARS</li>
+                    <li className="mobile_sub_menu main_menu_container COIN">
                     <ul>
                       <p>Gold Coin (22k)</p>
                       <li><a href="./category-metal"><span><img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fcf309e60-c975-11ed-b595-af49aafb0b4b.png&w=32&q=75" alt="" /></span> Gold</a></li>
@@ -161,7 +155,8 @@ export default class MobileNav extends Component {
                       <li><a href="./category-metal"><span><img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fd1e3e400-ca24-11ed-8b58-f33a71fa0958.png&w=32&q=75" alt="" /></span> Kids</a></li>
                     </ul>
                   </li>
-                  <li className="main_menu_container">
+                    <li onClick={()=>this.displayMenu(6)} className="category_btn py-2 text-xl hidden lg:block">ALL JEWELLERY</li>
+                    <li className="mobile_sub_menu main_menu_container">
                     <ul>
                       <p>Shop by metal</p>
                       <li><a href="./category-metal"><span><img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fd1e3e400-ca24-11ed-8b58-f33a71fa0958.png&w=32&q=75" alt="" /></span> Gold</a></li>
@@ -190,7 +185,8 @@ export default class MobileNav extends Component {
                       <li><a href="./category-metal"><span><img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fd1e3e400-ca24-11ed-8b58-f33a71fa0958.png&w=32&q=75" alt="" /></span> Kids</a></li>
                     </ul>
                   </li>
-                  <li className="main_menu_container">
+                    <li onClick={()=>this.displayMenu(7)} className="category_btn py-2 text-xl hidden lg:block">COLLECTIONS</li>
+                    <li className="mobile_sub_menu main_menu_container">
                     <ul>
                       <p>Aradhana</p>
                       <li><a href="./category-metal"><span><img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fd1e3e400-ca24-11ed-8b58-f33a71fa0958.png&w=32&q=75" alt="" /></span>Neckless</a></li>
@@ -221,7 +217,31 @@ export default class MobileNav extends Component {
                 </ul>
             </div>
         </div>
+      <nav className="mobile_navbar z-50 sticky bottom-0 bg-white border-t-[1px] rounded-t-md md:hidden">
+        <div className="flex flex-row w-screen justify-around p-5">
+          <div>
+            <a className="cursor-pointer" href="./">
+              <span className="text-[28px] material-symbols-outlined">home</span>
+            </a>
+          </div>
+          <div>
+            <button onClick={()=>{this.showMenu()}} className="cursor-pointer">
+              <span className="text-[28px] material-symbols-outlined">grid_view</span>
+            </button>
+          </div>
+          <div>
+            <a className="cursor-pointer" href="">
+              <span className="text-[28px] material-symbols-outlined">local_mall</span>
+            </a>
+          </div>
+          <div>
+            <button className="cursor-pointer">
+              <span className="text-[28px] material-symbols-outlined">person</span>
+            </button>
+          </div>
+        </div>
       </nav>
+      </>
     );
   }
 }

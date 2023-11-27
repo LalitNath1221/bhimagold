@@ -184,7 +184,7 @@
     height: 0;
     overflow: hidden;
     display: flex;
-    transition: .3s ease-in-out;
+    transition: .3s ease-in;
   }
   .visible{
     display: flex;
@@ -209,7 +209,25 @@
   .main_menu_container ul li span{
     margin-right: 10px;
   }
-  
+
+  .show_mobile{
+    display: block !important;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: white;
+  }
+  .mobile_sub_menu{
+    display: block;
+  }
+  .mobile_sub_menu ul{
+    display: block !important;
+    width: 100%;
+  }
+
 
   @media (min-width: 640px) { 
     .trust_card{
