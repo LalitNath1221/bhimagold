@@ -4,8 +4,8 @@ export default class Productpage extends Component {
   render() {
     return (
       <div className="product_page_container">
-        <div class="grid grid-cols-1 grid-rows-2  md:grid-cols-2 md:grid-rows-1 gap-4 p-10">
-          <div>
+        <div class="flex flex-row flex-wrap md:flex-nowrap p-2 sm:p-5 md:p-10">
+          <div className="w-full md:w-1/2">
             <div className="p-10 border-2 border-gray-400">
               <img
                 src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F4e966290-d464-11ed-a560-65eb94f96dbd.jpg&w=1200&q=75"
@@ -13,7 +13,7 @@ export default class Productpage extends Component {
               />
             </div>
           </div>
-          <div className="p-10">
+          <div className="w-full md:w-1/2 p-10">
             <div className="flex flex-row flex-nowrap items-center ">
               <p className="text-3xl md:text-4xl lg:text-5xl">
                 Golden Bead 22KT Gold Bangle For Kids
@@ -174,21 +174,174 @@ export default class Productpage extends Component {
         </div>
         <div class="grid grid-cols-1 grid-rows-2  md:grid-cols-2 md:grid-rows-1 gap-4 p-10">
           <div>
-            <div>
-              <p className="text-xl font-medium my-4">Product Details</p>
+            <div className="py-4 border-b-[1px] border-gray-400">
+              <p className="text-xl font-medium my-4">Metal Details</p>
               <table className="w-full">
-                <tr>
+                <tr className="grid grid-cols-4 my-4">
                     <td className="text-sm md:text-lg"><b>Component</b></td>
                     <td className="text-sm md:text-lg"><b>Rate</b></td>
                     <td className="text-sm md:text-lg"><b>Weight</b></td>
-                    <td className="text-sm md:text-lg"><b>Value</b></td>
+                    <td className="text-sm md:text-lg text-end"><b>Value</b></td>
                 </tr>
-                <tr>
-                    <td></td>
+                <tr className="grid grid-cols-4 my-4">
+                    <td className="text-sm md:text-lg">Gold 22 KT</td>
+                    <td className="text-sm md:text-lg">5499</td>
+                    <td className="text-sm md:text-lg">8.090 g</td>
+                    <td className="text-sm md:text-lg text-end">₹ 44,486.91</td>
+                </tr>
+                <tr className="grid grid-cols-4 my-4">
+                <td className="text-sm md:text-lg">Making Charges</td>
+                <td className="text-sm md:text-lg">-</td>
+                <td className="text-sm md:text-lg">-</td>
+                <td className="text-sm md:text-lg text-end">₹9,453.47</td>
                 </tr>
               </table>
             </div>
+            <div className="flex flex-row justify-between">
+              <ul>
+                <li className="text-sm md:text-lg my-2"><b>Subtotal</b></li>
+                <li className="text-sm md:text-lg my-2"><b>GST</b></li>
+                <li className="text-sm md:text-lg my-2"><b>Product Total</b></li>
+                <li className="text-sm md:text-lg my-2"><b>Grand Total</b></li>
+              </ul>
+              <ul>
+                <li className="text-sm md:text-lg my-2 text-end">₹ 53,940.38</li>
+                <li className="text-sm md:text-lg my-2 text-end">₹ 1,618.22</li>
+                <li className="text-sm md:text-lg my-2 text-end">₹ 55,559.00</li>
+                <li className="text-sm md:text-lg my-2 text-end">₹ 55,559.00</li>
+              </ul>
+            </div>
           </div>
+          <div className="flex justify-center items-center">
+            <img className="w-[180px] md:w-[230px]" src="https://www.bhimagold.com/images/box.png" alt="" />
+          </div>
+        </div>
+        <div>
+          <div className="flex flex-col sm:p-5 lg:p-10">
+          <div className="w-full lg:w-1/2">
+            <p className="text-2xl sm:text-4xl lg:text-5xl">Certifications</p>
+            <div className="flex flex-row flex-wrap md:flex-nowrap py-10">
+              <div className="p-5 flex flex-row flex-nowrap justify-center items-center">
+                <img className="w-[60px]" src="https://www.bhimagold.com/images/bis.svg" alt="" />
+                <p className="text-base ml-5">BIS Hallmarked</p>
+              </div>
+              <div className="p-5 flex flex-row flex-nowrap justify-center items-center">
+                <img className="w-[60px]" src="https://www.bhimagold.com/images/bis.svg" alt="" />
+                <p className="text-base ml-5">BIS Hallmarked</p>
+              </div>
+              <div className="p-5 flex flex-row flex-nowrap justify-center items-center">
+                <img className="w-[60px]" src="https://www.bhimagold.com/images/bis.svg" alt="" />
+                <p className="text-base ml-5">BIS Hallmarked</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div className="container_slider p-2 sm:p-5 md:pg-10">
+        <p className="text-2xl sm:text-4xl lg:text-5xl">Certifications</p>
+        <div className="collection_scrollbar md:flex md:flex-row md:flex-wrap md:justify-evenly w-full py-10">
+            <div className="w-[260px] md:w-[300px]">
+              <div className="border-[1px] border-gray-400">
+                <img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fb4c54560-e90c-11ed-8f15-176c9ae50cf3.jpg&w=512&q=75" alt="" />
+              </div>
+              <div className="flex flex-row flex-nowrap justify-between mt-4">
+                <p className="text-base font-medium">Golden Bloom 22KT Gold Bangl</p>
+                <div className="flex flex-col">
+                  <p className="text-sm text-end">₹ 56,375</p>
+                  <p className="text-base font-bold">₹ 52,245</p>
+                </div>
+              </div>
+            </div>
+            <div className="w-[260px] md:w-[300px]">
+              <div className="border-[1px] border-gray-400">
+                <img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fb4c54560-e90c-11ed-8f15-176c9ae50cf3.jpg&w=512&q=75" alt="" />
+              </div>
+              <div className="flex flex-row flex-nowrap justify-between mt-4">
+                <p className="text-base font-medium">Golden Bloom 22KT Gold Bangl</p>
+                <div className="flex flex-col">
+                  <p className="text-sm text-end">₹ 56,375</p>
+                  <p className="text-base font-bold">₹ 52,245</p>
+                </div>
+              </div>
+            </div>
+            <div className="w-[260px] md:w-[300px]">
+              <div className="border-[1px] border-gray-400">
+                <img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fb4c54560-e90c-11ed-8f15-176c9ae50cf3.jpg&w=512&q=75" alt="" />
+              </div>
+              <div className="flex flex-row flex-nowrap justify-between mt-4">
+                <p className="text-base font-medium">Golden Bloom 22KT Gold Bangl</p>
+                <div className="flex flex-col">
+                  <p className="text-sm text-end">₹ 56,375</p>
+                  <p className="text-base font-bold">₹ 52,245</p>
+                </div>
+              </div>
+            </div>
+            <div className="w-[260px] md:w-[300px]">
+              <div className="border-[1px] border-gray-400">
+                <img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fb4c54560-e90c-11ed-8f15-176c9ae50cf3.jpg&w=512&q=75" alt="" />
+              </div>
+              <div className="flex flex-row flex-nowrap justify-between mt-4">
+                <p className="text-base font-medium">Golden Bloom 22KT Gold Bangl</p>
+                <div className="flex flex-col">
+                  <p className="text-sm text-end">₹ 56,375</p>
+                  <p className="text-base font-bold">₹ 52,245</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+        <div className="container_slider p-2 sm:p-5 md:pg-10">
+        <p className="text-2xl sm:text-4xl lg:text-5xl">Certifications</p>
+        <div className="collection_scrollbar md:flex md:flex-row md:flex-wrap md:justify-evenly w-full py-10">
+            <div className="w-[260px] md:w-[300px]">
+              <div className="border-[1px] border-gray-400">
+                <img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fb4c54560-e90c-11ed-8f15-176c9ae50cf3.jpg&w=512&q=75" alt="" />
+              </div>
+              <div className="flex flex-row flex-nowrap justify-between mt-4">
+                <p className="text-base font-medium">Golden Bloom 22KT Gold Bangl</p>
+                <div className="flex flex-col">
+                  <p className="text-sm text-end">₹ 56,375</p>
+                  <p className="text-base font-bold">₹ 52,245</p>
+                </div>
+              </div>
+            </div>
+            <div className="w-[260px] md:w-[300px]">
+              <div className="border-[1px] border-gray-400">
+                <img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fb4c54560-e90c-11ed-8f15-176c9ae50cf3.jpg&w=512&q=75" alt="" />
+              </div>
+              <div className="flex flex-row flex-nowrap justify-between mt-4">
+                <p className="text-base font-medium">Golden Bloom 22KT Gold Bangl</p>
+                <div className="flex flex-col">
+                  <p className="text-sm text-end">₹ 56,375</p>
+                  <p className="text-base font-bold">₹ 52,245</p>
+                </div>
+              </div>
+            </div>
+            <div className="w-[260px] md:w-[300px]">
+              <div className="border-[1px] border-gray-400">
+                <img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fb4c54560-e90c-11ed-8f15-176c9ae50cf3.jpg&w=512&q=75" alt="" />
+              </div>
+              <div className="flex flex-row flex-nowrap justify-between mt-4">
+                <p className="text-base font-medium">Golden Bloom 22KT Gold Bangl</p>
+                <div className="flex flex-col">
+                  <p className="text-sm text-end">₹ 56,375</p>
+                  <p className="text-base font-bold">₹ 52,245</p>
+                </div>
+              </div>
+            </div>
+            <div className="w-[260px] md:w-[300px]">
+              <div className="border-[1px] border-gray-400">
+                <img src="https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2Fb4c54560-e90c-11ed-8f15-176c9ae50cf3.jpg&w=512&q=75" alt="" />
+              </div>
+              <div className="flex flex-row flex-nowrap justify-between mt-4">
+                <p className="text-base font-medium">Golden Bloom 22KT Gold Bangl</p>
+                <div className="flex flex-col">
+                  <p className="text-sm text-end">₹ 56,375</p>
+                  <p className="text-base font-bold">₹ 52,245</p>
+                </div>
+              </div>
+            </div>
+        </div>
         </div>
       </div>
     );
