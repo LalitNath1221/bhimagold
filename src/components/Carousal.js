@@ -2,7 +2,7 @@ import React, { render } from "react";
 
 const Carousal = () => {
   const [current, setCurrent] = React.useState(0);
-  const images = ["https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1","https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1","https://images.pexels.com/photos/4091975/pexels-photo-4091975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"];
+  const images = ["https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F4e966290-d464-11ed-a560-65eb94f96dbd.jpg&w=1200&q=75","https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F4e966291-d464-11ed-a560-65eb94f96dbd.jpg&w=1200&q=75","https://www.bhimagold.com/_next/image?url=https%3A%2F%2Fd1bpnn2a5id540.cloudfront.net%2F1653277918007%2F4e966295-d464-11ed-a560-65eb94f96dbd.jpg&w=1200&q=75"];
   const imageSlides = document.getElementsByClassName("slide-image");
   const bubbles = document.getElementsByClassName("bubble-outer");
   const nextImage = () => {
@@ -33,16 +33,16 @@ const Carousal = () => {
     setCurrent(jumpIndex);
   }
   const updateBubbles = (highlight) => {
-    bubbles[current].style.borderColor = "black";
-    bubbles[highlight].style.borderColor = "white";
+    bubbles[current].style.backgroundColor = "white";
+    bubbles[highlight].style.backgroundColor = "black";
   }
   React.useEffect(() => {
-    bubbles[current].style.borderColor="white";
+    bubbles[current].style.backgroundColor="black";
   }, []);
   return (
     <div className="gallery-container">
-      <span className="button-prev" onClick={prevImage}>chevron_left</span>
-      <span className="button-next" onClick={nextImage}>chevron_right</span>
+      <span className="material-symbols-outlined button-prev" onClick={prevImage}>arrow_left_alt</span>
+      <span className="material-symbols-outlined button-next" onClick={nextImage}>arrow_right_alt</span>
       <div className="gallery-track">
         {
           images.map((image, index) => {

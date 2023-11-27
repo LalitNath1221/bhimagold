@@ -8,7 +8,7 @@ export default class Productpage extends Component {
     return (
       <div className="product_page_container">
         <div class="flex flex-row flex-wrap md:flex-nowrap p-2 sm:p-5 md:p-10">
-          <div className="w-full md:w-1/2">
+          <div className="w-full h-fit md:w-1/2 aspect-square border-[1px] border-gray-500">
             <Carousal/>
           </div>
           <div className="w-full md:w-1/2 p-10">
@@ -64,8 +64,8 @@ export default class Productpage extends Component {
               </p>
               <p className="text-red-600">save &#8377; 3, 975</p>
             </div>
-            <div className="my-4">
-              <button className=" cursor-pointer w-full p-4 bg-gradient-to-r from-red-400 to-pink-300">
+            <div className="my-4 fixed left-0 bottom-20 z-20 w-full px-8 md:z-auto md:px-0 md:relative md:bottom-auto">
+              <button className="cursor-pointer w-full p-4 bg-gradient-to-r from-red-400 to-pink-300">
                 <p className="text-xl uppercase text-center">
                   <span class="text-[25px] material-symbols-outlined">
                     local_mall
